@@ -1,0 +1,94 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif;
+}
+
+header {
+    background-color: chocolate;
+    padding: 20px;
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+
+section {
+    background-color: darkorange;
+    height: 700px;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 25%;
+    height: 100%; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 10px;
+    width: 70%;
+    background-color: darkgray;
+    height: 100%; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*네비게이터*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+
+/* Style the footer */
+footer {
+    background-color: chocolate;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
